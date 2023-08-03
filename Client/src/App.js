@@ -59,7 +59,7 @@ const App = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5002/api/form", form);
+      const response = await axios.post("http://localhost:3000/api/form", form);
       console.log(response.data);
       fetchFormData();
     } catch (error) {
@@ -73,7 +73,7 @@ const App = () => {
 
   const fetchFormData = async () => {
     try {
-      const response = await axios.get("http://localhost:5002/api/form");
+      const response = await axios.get("http://localhost:3000/api/form");
       setData(response.data);
     } catch (error) {
       console.error("Error occurred while fetching form data: ", error);
